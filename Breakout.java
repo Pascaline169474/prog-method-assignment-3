@@ -76,6 +76,7 @@ public class Breakout extends GraphicsProgram {
 	 double y = by + NBRICKS_PER_ROW * BRICK_HEIGHT + NBRICKS_PER_ROW * BRICK_SEP;
 	 double x = bx - (NBRICKS_PER_ROW * BRICK_WIDTH)/2 + NBRICK_ROWS * BRICK_SEP;
 	 
-	 GRect brick = new GRect 
+	 GRect brick = new GRect (x,y, BRICK_WIDTH, BRICK_HEIGHT);
+	 
     }
 }

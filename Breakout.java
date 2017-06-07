@@ -96,5 +96,10 @@ public class Breakout extends GraphicsProgram {
 	 add (brick);
 	 }
 	 
+     
+
+    private void buildPaddle (){
+    	paddle = new GRect (WIDTH/2)
     }
-}
+    	
+    }

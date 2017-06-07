@@ -70,8 +70,8 @@ public class Breakout extends GraphicsProgram {
 		buildBricks(10,10);
     	}
 	 private void buildBricks(double bx, double by) {
-		for (int row = 0; row<10; row++);
-		for (int column = 0; column<10; column++);
+		for (int row = 0; row < NBRICKS_PER_ROW ; row++);
+		for (int column = 0; column < NBRICK_ROWS; column++);
 		
 	 double y = by + NBRICKS_PER_ROW * BRICK_HEIGHT + NBRICKS_PER_ROW * BRICK_SEP;
 	 double x = ax - (

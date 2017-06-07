@@ -95,6 +95,7 @@ public class Breakout extends GraphicsProgram {
      
 	 add (brick);
 	 }
+	
 	 
      
 
@@ -106,9 +107,9 @@ public class Breakout extends GraphicsProgram {
     	paddle.setFilled(true);
     	paddle.setColor(Color.BLACK);
     	add(paddle);
+     }
     	
+    
+    public void mouseMoved(MouseEvent e){
     	
     }
-    	
-    }
-   

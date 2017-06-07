@@ -74,7 +74,7 @@ public class Breakout extends GraphicsProgram {
 		for (int column = 0; column < NBRICKS_PER_ROW; column++);
 		
 	 double y = by + NBRICKS_PER_ROW * BRICK_HEIGHT + NBRICKS_PER_ROW * BRICK_SEP;
-	 double x = bx - (NBRICKS_PER_ROW * BRICK_WIDTH)/2 + column * BRICK_SEP;
+	 double x = bx - (NBRICKS_PER_ROW * BRICK_WIDTH)/2 + NBRICK_ROWS * BRICK_SEP;
 	 
 	 
     }

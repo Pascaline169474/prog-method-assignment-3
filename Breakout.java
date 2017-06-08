@@ -109,13 +109,14 @@ public class Breakout extends GraphicsProgram {
 	    	paddle.setFilled(true);
 	    	paddle.setColor(Color.BLACK);
 	    	add (paddle);
-//	    	add (mouseListener);
+    	    add (mouseListener);
 	    	
 	     }
 	    	
 	    
 	    public void mouseMoved(MouseEvent e){
-//	    lastX = e.getX();
+	    	lastX = e.getX();
+        
 	    
 	    
 	    }

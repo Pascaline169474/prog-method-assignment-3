@@ -67,6 +67,7 @@ public class Breakout extends GraphicsProgram {
 	
 	}
 	private void buildGame(){
+		setSize(WIDTH, HEIGHT);
 		buildBricks(0,BRICK_Y_OFFSET);
 		buildPaddle();
     	}
@@ -108,7 +109,13 @@ public class Breakout extends GraphicsProgram {
 	    	paddle.setFilled(true);
 	    	paddle.setColor(Color.BLACK);
 	    	add (paddle);
+//	    	add (mouseListener);
 	    	
+	     }
+	    	
+	    
+	    public void mouseMoved(MouseEvent e){
+//	    lastX = e.getX();
 	    
 	    
 	    }

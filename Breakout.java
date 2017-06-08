@@ -70,8 +70,8 @@ public class Breakout extends GraphicsProgram {
 		buildBricks(10,10);
     	}
 	 private void buildBricks(double bx, double by) {
-		for (int row = 0; row < NBRICK_ROWS ; row++);
-		for (int column = 0; column < NBRICKS_PER_ROW; column++);
+		for (int row = 0; row < NBRICK_ROWS ; row++){
+		for (int column = 0; column < NBRICKS_PER_ROW; column++){
 		
 	 double y = by + NBRICKS_PER_ROW * BRICK_HEIGHT + BRICK_Y_OFFSET * BRICK_SEP;
 	 double x = bx - (NBRICKS_PER_ROW * BRICK_WIDTH)/2 + NBRICK_ROWS * BRICK_SEP;
@@ -94,26 +94,10 @@ public class Breakout extends GraphicsProgram {
 	 }
      
 	 add (brick);
+		}
+		}
 	 }
+}
 	
 	 
      
-
-    private void buildPaddle (){
-    	double x = getWidth()/2 - PADDLE_WIDTH/2;
-    	double y = getHeight() - PADDLE_Y_OFFSET - PADDLE_HEIGHT;
-    	
-    	paddle = new GRect (x,y, PADDLE_WIDTH, PADDLE_HEIGHT);
-    	paddle.setFilled(true);
-    	paddle.setColor(Color.BLACK);
-    	add (paddle);
-    	add (mouseTracker);
-    	
-     }
-    	
-    
-    public void mouseMoved(MouseEvent e){
-    lastX = e.getX();
-    
-    
-    }

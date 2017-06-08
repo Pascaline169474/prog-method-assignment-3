@@ -124,11 +124,14 @@ public class Breakout extends GraphicsProgram {
 	    		paddle.setLocation (WIDTH - PADDLE_WIDTH, HEIGHT * PADDLE_Y_OFFSET);
 	    	}
 	    }
-
-        
 	    
-	    
-	   }
+	    private void buildBall(){
+	    	GOval ball = new GOval(WIDTH/2 - BALL_RADIUS, HEIGHT/2 - BALL_RADIUS,BALL_RADIUS, BALL_RADIUS);
+	    	
+	    	
+	    }
+ 
+}
 
 	
 	 

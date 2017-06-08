@@ -115,8 +115,8 @@ public class Breakout extends GraphicsProgram {
 	    	
 	    
 	    public void mouseMoved(MouseEvent e){
-	    	lastX = e.getX();
-	    	if e.getX 
+//	    	lastX = e.getX();
+//	    	if e.getX 
         
 	    
 	    

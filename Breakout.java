@@ -64,7 +64,7 @@ public class Breakout extends GraphicsProgram {
 	public void run() {
 		/* You fill this in, along with any subsidiary methods */
 		buildGame();
-//		playGame();
+		playGame();
 		
 	
 	}
@@ -134,9 +134,13 @@ public class Breakout extends GraphicsProgram {
 	    	
 	    	
 	    }
- 
-}
+        
+	    private void playGame(){
+	    	
+	    }
 
-	
+	    }
+
+	    
 	 
      

@@ -57,14 +57,23 @@ public class Breakout extends GraphicsProgram {
 /** Number of turns */
 	private static final int NTURNS = 3;
 	
+	private static final int TIME_DELAY = 20;
+	
 	private GRect paddle;
+	
+	private GOval ball;
+	
+	private double vx,vy;
+	
+	private RandomGenerator rgen = RandomGenerator.getInstance();
+	
 
 /* Method: run() */
 /** Runs the Breakout program. */
 	public void run() {
 		/* You fill this in, along with any subsidiary methods */
 		buildGame();
-		//playGame();
+		playGame();
 		
 	
 	}
@@ -127,7 +136,7 @@ public class Breakout extends GraphicsProgram {
 	    }
 	    
 	    private void buildBall(){
-	    	GOval ball = new GOval(WIDTH/2 - BALL_RADIUS, HEIGHT/2 - BALL_RADIUS,BALL_RADIUS, BALL_RADIUS);
+	    	ball = new GOval(WIDTH/2 - BALL_RADIUS, HEIGHT/2 - BALL_RADIUS,BALL_RADIUS, BALL_RADIUS);
 	    	ball.setFilled(true);
 	    	ball.setColor(Color.BLACK);
 	    	add(ball);
@@ -135,7 +144,48 @@ public class Breakout extends GraphicsProgram {
 	    	
 	    }
         
-	    //private void playGame(){
+	    private void playGame(){
+	    	moveBall();
+	    	
+	    	
+	   private void moveBall(){
+		   vx=rgen.nextDouble(1.0,3.0);
+		   if(rgen.nextBoolean(0.5))vx=-vx;
+		   vy=3.0;
+		   
+		   while (true){
+			   ball.move(vx, vy);
+			   pause(TIME_DELAY);
+			   checkWalls();
+			   GObject collider=getCollidingObject();
+			   
+			if (collider==paddle){
+				vy=-vy;
+			}else if (collider!= null && collider != paddle){
+				
+			}
+		   }
+	   }
+	    	
+	   	private void checkWalls(){
+	   		if(ball.getX() <=0){
+	   			vx=-vx;	   		
+	   		}else if (ball.getX() + 2* BALL_RADIUS >= WIDTH){
+	   			vx=-vx;
+	   		}else if (ball.getY() <=0){
+	   			vy=-vy;
+	   		}else if (ball.getY() + 2* BALL_RADIUS >= HEIGHT){
+	   			vy=-vy;
+	   		}
+	   		
+	   	}
+	   	
+	    
+		private GObject getCollidingObject() {
+			
+			return null;
+		}
+		
 	    	
 	    
 

@@ -146,7 +146,7 @@ public class Breakout extends GraphicsProgram {
         
 	    private void playGame(){
 	    	moveBall();
-	    	
+	    }
 	    	
 	   private void moveBall(){
 		   vx=rgen.nextDouble(1.0,3.0);

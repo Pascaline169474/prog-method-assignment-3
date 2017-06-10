@@ -151,7 +151,7 @@ public class Breakout extends GraphicsProgram {
 	   private void moveBall(){
 		   vx=rgen.nextDouble(1.0,3.0);
 		   if(rgen.nextBoolean(0.5))vx=-vx;
-		   vy=3.0;
+		   vy=4.0;
 		   
 		   while (true){
 			   ball.move(vx, vy);
@@ -187,10 +187,6 @@ public class Breakout extends GraphicsProgram {
 		}
 		
 	    	
-	    
-
-	    //if (ball.getX() <= 0);
-	    //vx = -vx;
 	    
 
 	    }

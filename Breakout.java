@@ -136,14 +136,9 @@ public class Breakout extends GraphicsProgram {
 	    }
         
 	    private void playGame(){
-	//    	waitForClicks();
-	//    	getBallVelocity();
-	//    	moveBall();
-	    	checkWalls();
-	//    	printGameOver();
-	//    	printWinner();
-	    }
-}
+	    	
+	    
+
 	    if (ball.getX() <= 0);
 	    vx = -vx;
 	    

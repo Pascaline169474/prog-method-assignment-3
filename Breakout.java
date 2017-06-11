@@ -165,7 +165,15 @@ public class Breakout extends GraphicsProgram {
 			if (collider==paddle){
 				vy=-vy;
 			}else if (collider!= null && collider != paddle){
-				
+			
+				if (ball.getY()>=getHeight()){
+					printGameOver();
+					break;
+				}if(brickCounter=0){
+					ball.setVisible(false);
+					printWinner();
+					break;
+				}
 			}
 		   }
 	   }
@@ -199,8 +207,20 @@ public class Breakout extends GraphicsProgram {
 		}
 		
 		
-				
-	    	
+		private void printWinner(){
+			GLabel Winner = new GLabel ("Winner!!", getWidth()/2, getHeight()/2);
+			Winner.move(-Winner.getWidth()/2,- Winner.getHeight());
+			Winner.setColor(Color.BLUE);
+			add(Winner);
+		}
+	    private int brickCounter=100;
+	    
+	    private void printGameOver(){
+	    	GLabel gameOver = new GLabel ("Game Over!!", getWidth()/2, getHeight()/2);
+			gameOver.move(-gameOver.getWidth()/2,- gameOver.getHeight());
+			gameOver.setColor(Color.RED);
+			add(gameOver);
+	    }
 	    
 
 	    }

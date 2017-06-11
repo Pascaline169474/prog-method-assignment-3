@@ -67,6 +67,8 @@ public class Breakout extends GraphicsProgram {
 	
 	private RandomGenerator rgen = RandomGenerator.getInstance();
 	
+	private int brickCounter=100;
+	
 
 /* Method: run() */
 /** Runs the Breakout program. */
@@ -166,14 +168,7 @@ public class Breakout extends GraphicsProgram {
 				vy=-vy;
 			}else if (collider!= null && collider != paddle){
 			
-				if (ball.getY()>=getHeight()){
-					printGameOver();
-					break;
-				}if(brickCounter=0){
-					ball.setVisible(false);
-					printWinner();
-					break;
-				}
+				
 			}
 		   }
 	   }
@@ -213,7 +208,7 @@ public class Breakout extends GraphicsProgram {
 			Winner.setColor(Color.BLUE);
 			add(Winner);
 		}
-	    private int brickCounter=100;
+	    
 	    
 	    private void printGameOver(){
 	    	GLabel gameOver = new GLabel ("Game Over!!", getWidth()/2, getHeight()/2);

@@ -204,7 +204,7 @@ public class Breakout extends GraphicsProgram {
 	   	private void checkWalls(){
 	   		if(ball.getX()  <=0){
 	   			vx=-vx;	   		
-	   		}else if (ball.getX()  >= WIDTH -  BALL_RADIUS){
+	   		}else if (ball.getX()  >= WIDTH - BALL_RADIUS){
 	   			vx=-vx;
 	   		}else if (ball.getY() <=0){
 	   			vy=-vy;

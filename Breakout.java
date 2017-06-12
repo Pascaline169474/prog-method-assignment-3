@@ -164,9 +164,10 @@ public class Breakout extends GraphicsProgram {
 	    		if (brickCounter == 0) {
 	    			break;
 	    		}
-	    	}
+	    	
 	    	getCollidingObject();
 	    	checkWalls();
+	    	}
 	    	
 	    	
 	    }  

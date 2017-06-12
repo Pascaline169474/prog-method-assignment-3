@@ -169,7 +169,9 @@ public class Breakout extends GraphicsProgram {
 			if (collider==paddle){
 				vy=-vy;
 			}else if (collider!= null && collider != paddle){
-			
+				
+				remove(collider);
+				brickCounter--;
 				
 			}
 		   }

@@ -78,13 +78,18 @@ public class Breakout extends GraphicsProgram {
 			buildGame();
 			playGame();
 			if (brickCounter == 0){
+				ball.setVisible(false);
+				printWinner();
+				break;
+			}
+			if  (brickCounter >0){
 				removeAll();
 			
 			}
 		}
-		if(brickCounter> 0);
+		if(brickCounter> 0){
 			printGameOver();
-	
+		}
 	}
 	private void buildGame(){
 		setSize(WIDTH, HEIGHT);

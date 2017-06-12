@@ -74,9 +74,16 @@ public class Breakout extends GraphicsProgram {
 /** Runs the Breakout program. */
 	public void run() {
 		/* You fill this in, along with any subsidiary methods */
-		buildGame();
-		playGame();
-		
+		for (int i =0; i< NTURNS; i++){
+			buildGame();
+			playGame();
+			if (brickCounter == 0){
+				removeAll();
+			
+			}
+		}
+		if(brickCounter> 0);
+			printGameOver();
 	
 	}
 	private void buildGame(){
@@ -147,11 +154,21 @@ public class Breakout extends GraphicsProgram {
 	    }
         
 	    private void playGame(){
-	    	for (int i =0; i< NTURNS; i++){
-	    	moveBall();
+	    	waitForClick();
+	    	getBallVelocity();
+	    	while (true) {	
+	    		moveBall();
+	    		if (ball.getY() >= getHeight()){
+	    			break;
+	    		}
+	    		if (brickCounter == 0) {
+	    			break;
+	    		}
+	    	}
 	    	getCollidingObject();
 	    	checkWalls();
-	    	}
+	    	
+	    	
 	    }  
 	    	
 	   private void getBallVelocity(){

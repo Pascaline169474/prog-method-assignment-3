@@ -57,7 +57,7 @@ public class Breakout extends GraphicsProgram {
 /** Number of turns */
 	private static final int NTURNS = 3;
 	
-	private static final int TIME_DELAY = 50;
+	private static final int TIME_DELAY = 30;
 	
 	private GRect paddle;
 	

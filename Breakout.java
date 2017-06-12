@@ -164,10 +164,9 @@ public class Breakout extends GraphicsProgram {
 	    		if (brickCounter == 0) {
 	    			break;
 	    		}
-	    	
+	    	}
 	    	getCollidingObject();
 	    	checkWalls();
-	    	}
 	    	
 	    	
 	    }  
@@ -187,7 +186,7 @@ public class Breakout extends GraphicsProgram {
 			   
 			if (collider==paddle){
 				vy=-vy;
-			}else if (collider!= null && collider != paddle){
+			}else if (collider!= null ){
 				
 				remove(collider);
 				brickCounter--;

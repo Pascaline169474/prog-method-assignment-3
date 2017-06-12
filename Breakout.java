@@ -180,7 +180,7 @@ public class Breakout extends GraphicsProgram {
 	   			vx=-vx;
 	   		}else if (ball.getY() <=0){
 	   			vy=-vy;
-	   		
+	   		}
 	   		
 	   	}
 	   	

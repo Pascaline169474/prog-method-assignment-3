@@ -147,9 +147,11 @@ public class Breakout extends GraphicsProgram {
 	    }
         
 	    private void playGame(){
+	    	for (int i =0; i< NTURNS; i++){
 	    	moveBall();
 	    	getCollidingObject();
 	    	checkWalls();
+	    	}
 	    }  
 	    	
 	   private void moveBall(){

@@ -168,14 +168,7 @@ public class Breakout extends GraphicsProgram {
 				vy=-vy;
 			}else if (collider!= null && collider != paddle){
 			
-				if (ball.getY()>=getHeight()){
-					printGameOver();
-					break;
-				}if(brickCounter=0){
-					ball.setVisible(false);
-					printWinner();
-					break;
-				}	
+				
 			}
 		   }
 	   }

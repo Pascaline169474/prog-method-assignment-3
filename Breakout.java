@@ -154,16 +154,18 @@ public class Breakout extends GraphicsProgram {
 	    	}
 	    }  
 	    	
-	   private void moveBall(){
-		   vy=4.0;
+	   private void getBallVelocity(){
+		   vy=5.0;
 		   vx=rgen.nextDouble(1.0,3.0);
 		   if(rgen.nextBoolean(0.5))vx=-vx;
+	   }
 		   
-		   
+	     private void moveBall(){
 			   ball.move(vx, vy);
-			   pause(TIME_DELAY);
 			   checkWalls();
-			   GObject collider=getCollidingObject();
+	
+		   GObject collider= getCollidingObject();
+			   
 			   
 			if (collider==paddle){
 				vy=-vy;
@@ -173,8 +175,8 @@ public class Breakout extends GraphicsProgram {
 				brickCounter--;
 				
 			}
-		   
-	   }
+			pause(TIME_DELAY);
+	      }
 	    	
 	   	private void checkWalls(){
 	   		if(ball.getX()  <=0){

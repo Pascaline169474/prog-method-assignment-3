@@ -190,6 +190,7 @@ public class Breakout extends GraphicsProgram {
 				
 				remove(collider);
 				brickCounter--;
+				vy = -vy;
 				
 			}
 			pause(TIME_DELAY);

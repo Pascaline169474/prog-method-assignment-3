@@ -160,7 +160,6 @@ public class Breakout extends GraphicsProgram {
 		   if(rgen.nextBoolean(0.5))vx=-vx;
 		   
 		   
-		   while (true){
 			   ball.move(vx, vy);
 			   pause(TIME_DELAY);
 			   checkWalls();
@@ -170,11 +169,11 @@ public class Breakout extends GraphicsProgram {
 				vy=-vy;
 			}else if (collider!= null && collider != paddle){
 				
-				
+				remove(collider);
 				brickCounter--;
 				
 			}
-		   }
+		   
 	   }
 	    	
 	   	private void checkWalls(){
